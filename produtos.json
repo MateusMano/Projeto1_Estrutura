@@ -1,0 +1,37 @@
+[
+  {
+    "codigo": 101,
+    "nome": "Mouse sem fio",
+    "categoria": "Perifericos",
+    "preco": 89.9,
+    "quantidade": 12
+  },
+  {
+    "codigo": 205,
+    "nome": "Teclado mecanico",
+    "categoria": "Perifericos",
+    "preco": 249.9,
+    "quantidade": 5
+  },
+  {
+    "codigo": 310,
+    "nome": "Monitor 24 polegadas",
+    "categoria": "Monitores",
+    "preco": 799.0,
+    "quantidade": 3
+  },
+  {
+    "codigo": 122,
+    "nome": "Cabo HDMI",
+    "categoria": "Cabos",
+    "preco": 35.5,
+    "quantidade": 25
+  },
+  {
+    "codigo": 450,
+    "nome": "Webcam Full HD",
+    "categoria": "Acessorios",
+    "preco": 159.9,
+    "quantidade": 2
+  }
+]
