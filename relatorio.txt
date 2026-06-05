@@ -1,0 +1,34 @@
+Relatorio curto de escolhas
+Vetor nao ordenado
+O sistema mantem produtos, um vetor nao ordenado usado como cadastro principal
+e para busca por nome. A busca por nome usa busca linear porque os nomes nao
+estao ordenados e tambem porque a busca aceita parte do texto, por exemplo
+procurar mou para encontrar Mouse sem fio.
+
+Complexidade da busca linear: O(n), pois no pior caso todos os produtos podem
+precisar ser verificados.
+
+Vetor ordenado por codigo
+O sistema tambem mantem produtos_ordenados, um vetor ordenado pelo codigo do
+produto. Esse vetor e usado para busca por codigo com busca binaria. Como o
+codigo e unico e o vetor esta ordenado, a busca binaria consegue descartar
+metade dos elementos a cada comparacao.
+
+Complexidade da busca binaria: O(log n), pois o espaco de busca diminui pela
+metade a cada passo.
+
+Insercao e remocao
+Ao cadastrar um produto, o sistema usa a propria busca binaria para descobrir a
+posicao correta de insercao no vetor ordenado. Depois insere nessa posicao para
+manter a ordem por codigo.
+
+A busca da posicao custa O(log n), mas a insercao em vetor pode custar O(n),
+porque os elementos seguintes podem precisar ser deslocados.
+
+Ao remover, o produto e removido dos dois vetores. A remocao em vetor tambem
+pode custar O(n) devido ao deslocamento dos elementos.
+
+Persistencia
+Os dados sao salvos em JSON no arquivo produtos.json. Ao iniciar, o
+sistema carrega esse arquivo e reconstrui os dois vetores em memoria. Ao fazer
+cadastro, edicao, remocao ou venda, o arquivo e salvo novamente.
